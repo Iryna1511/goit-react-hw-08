@@ -1,0 +1,11 @@
+.dscr {
+  margin-right: auto;
+}
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.row:not(:last-child) {
+  margin-bottom: 10px;
+}

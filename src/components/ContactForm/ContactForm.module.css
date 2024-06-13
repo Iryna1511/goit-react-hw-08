@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 320px;
+  padding: 20px;
+  margin-bottom: 24px;
+  border: 1px solid grey;
+  border-radius: 8px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  margin-bottom: 8px;
+}
+.error {
+  color: orangered;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+.input {
+  padding: 8px;
+  border-radius: 4px;
+  opacity: 0.6;
+}
+
+.btn {
+  max-width: 120px;
+  padding: 6px 12px;
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}

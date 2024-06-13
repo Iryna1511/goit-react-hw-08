@@ -1,6 +1,8 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useId } from "react";
+import { useDispatch } from "react-redux";
 import * as Yup from "yup";
+import { register } from "../../redux/auth/operations";
 
 export default function RegistrationForm() {
   const nameId = useId();
@@ -22,8 +24,18 @@ export default function RegistrationForm() {
       .min(6, "Мінімум 3 символи!")
       .max(30, "Максимум 30 символів!"),
   });
+
+  const dispatch = useDispatch();
+  const handleSubmit = (values, actions) => {
+    dispatch(register(values));
+    actions.resetForm();
+  };
   return (
-    <Formik initialValues={initialValues} validationSchema={schema}>
+    <Formik
+      initialValues={initialValues}
+      onSubmit={handleSubmit}
+      validationSchema={schema}
+    >
       <Form autoComplete="off">
         <div>
           <label htmlFor={nameId}>Name</label>
