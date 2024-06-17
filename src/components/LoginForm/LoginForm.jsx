@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { logIn } from "../../redux/auth/operations";
 import css from "../FormStyles/FormStyles.module.css";
 
-export default function RegistrationForm() {
+export default function LoginForm() {
   const emailId = useId();
   const pswdId = useId();
   const initialValues = {

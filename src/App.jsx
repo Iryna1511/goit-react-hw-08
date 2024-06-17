@@ -4,6 +4,7 @@ import Layout from "./components/Layout/Layout";
 import RestrictedRout from "./components/RestrictedRout";
 import PrivateRout from "./components/PrivateRout";
 import Loader from "./components/Loader/Loader";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import { useDispatch, useSelector } from "react-redux";
 import { refreshUser } from "./redux/auth/operations";
 import { selectIsRefreshing } from "./redux/auth/selectors";
@@ -48,6 +49,7 @@ export default function App() {
               <PrivateRout component={<ContactsPage />} redirectTo="/login" />
             }
           />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
     </Layout>
@@ -55,3 +57,4 @@ export default function App() {
 }
 
 // shiryna@mail.com
+// jane.dou@mail.com
